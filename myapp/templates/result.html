@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotspot Result</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}">
+</head>
+<body>
+    <div class="content-box">
+    
+    <h1>Prediction Result</h1>
+    <p><strong>County:</strong> {{ county }}</p>
+    <p><strong>Year:</strong> {{ year }}</p>
+    <p><strong>Predicted Rate:</strong> {{ predicted_rate }}</p>
+    <p><strong>Hotspot:</strong> {{ is_hotspot }}</p>
+    <p><strong>Associated Diseases:</strong> {{ associated_diseases|join:", " }}</p>
+
+    {% if chart_data %}
+    <img src="{{ chart_data }}" alt="Hotspot Chart">
+    {% endif %}
+    <a href="{% url 'predict_hotspot' %}">Analyze another</a>
+</div>
+</body>
+</html>

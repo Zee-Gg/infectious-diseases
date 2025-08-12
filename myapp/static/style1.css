@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('img1.webp') no-repeat center center fixed; /* Replace 'img1.webp' with your actual image path */
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Overlay for text visibility */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    z-index: -1;
+}
+
+/* Content Box */
+.content-box {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle white border */
+    border-radius: 12px;
+    padding: 20px 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Shadow for emphasis */
+}
+
+/* Title Styles */
+h1 {
+    text-align: center;
+    color: #ffffff; /* Bright white */
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Prominent shadow */
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin: 10px 0;
+    color: #ffffff; /* Bright white */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+}
+
+/* Highlighted Text */
+strong {
+    color: #ffffff; /* White for consistency */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+}
+
+/* Image Styles */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Link Styles */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(to right, #f39c12, #d35400);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Shadow for better visibility */
+}
+
+/* Link Hover Effects */
+a:hover {
+    background: linear-gradient(to right, #ffcd4d, #ffa800);
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
